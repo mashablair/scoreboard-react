@@ -46,12 +46,9 @@ const Counter = (props) => {
 const Player = (props) => {
 	return (
 		<div className="player">
-			<span className="player-name">
-				{props.name}
-			</span>
+			<span className="player-name">{props.name}</span>
 
-			<Counter
-				score={props.score}/>
+			<Counter score={props.score}/>
 		</div>
 	)
 }
@@ -63,7 +60,12 @@ const App = (props) => {
 		
 			{/* Players List */}
 			{props.initialPlayers.map( player => 
-				<Player name={player.name} score={player.score} key={player.id.toString()} />
+				<Player 
+					{...player}
+//					name={player.name}
+//					score={player.score}
+					key={player.id.toString()} 
+				/>
 			)}
 		</div>
 	)
