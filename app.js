@@ -1,4 +1,6 @@
-  var players = [
+"use strict";  
+
+var players = [
   {
     name: "Guil",
     score: 50,
@@ -24,7 +26,6 @@
 
 
 const Header = (props) => {
-	console.log(props);
 	return (
 		<header>
 			<h1>{props.title}</h1>
@@ -44,11 +45,19 @@ const Header = (props) => {
 //}
 
 class Counter extends React.Component {
+	
+	constructor() {
+		super()
+		this.state = {
+			score: 0
+		};
+	}
+	
 	render() {
 		return (
 			<div className="counter">
 				<button className="counter-action decrement"> - </button>
-				<span className="counter-score">{this.props.score}</span>
+				<span className="counter-score">{this.state.score}</span>
 				<button className="counter-action increment"> + </button>
 			</div>
 		);	
@@ -61,7 +70,7 @@ const Player = (props) => {
 		<div className="player">
 			<span className="player-name">{props.name}</span>
 
-			<Counter score={props.score}/>
+			<Counter />
 		</div>
 	);
 }
@@ -74,9 +83,8 @@ const App = (props) => {
 			{/* Players List */}
 			{props.initialPlayers.map( player => 
 				<Player 
-					{...player}
-//					name={player.name}
-//					score={player.score}
+					// {...player}
+					name={player.name}
 					key={player.id.toString()} 
 				/>
 			)}
