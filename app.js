@@ -43,6 +43,7 @@ class Counter extends React.Component {
 	incrementScore() {
 		console.log(this);
 		// if we don't bind 'this' in the onClick handler, above 'this' will be undefined
+		// another way to bind 'this' is to use arrow function syntax and add () 
 		this.setState({
 			score: this.state.score + 1
 		});
@@ -53,7 +54,7 @@ class Counter extends React.Component {
 			<div className="counter">
 				<button className="counter-action decrement"> - </button>
 				<span className="counter-score">{this.state.score}</span>
-				<button className="counter-action increment" onClick={this.incrementScore.bind(this)}> + </button>
+				<button className="counter-action increment" onClick={() => this.incrementScore()}> + </button>
 			</div>
 		);	
 	}
