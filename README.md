@@ -2,7 +2,7 @@
 Scoreboard app built with React.js.  
 
 ## To view the app in a browser:
-
+https://mashablair.github.io/scoreboard-react/
 
 ## Basic React concepts learned: 
 - [x] JSX
