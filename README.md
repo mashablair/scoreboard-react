@@ -13,3 +13,5 @@ Scoreboard app built with React.js.
 
 ## Project image:
 
+![alt tag](https://github.com/mashablair/scoreboard-react/blob/master/scoreboard-img.png)
+
