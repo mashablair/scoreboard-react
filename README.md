@@ -13,7 +13,4 @@ https://mashablair.github.io/React-Scoreboard-app/
 - [x] Components
 - [x] Events
 
-## Project image:
-
-![alt tag](https://github.com/mashablair/scoreboard-react/blob/master/scoreboard-img.png)
 
